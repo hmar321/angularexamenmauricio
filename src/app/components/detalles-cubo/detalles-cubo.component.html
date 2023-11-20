@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;">
+    <img src="{{cubo.imagen}}" class="card-img-top" style="width: 18rem;height: 16rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{cubo.marca}} {{cubo.modelo}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{cubo.nombre}}</h6>
+        <h6 class="card-text">COmentarios:</h6>
+        <p class="card-text" *ngFor="let comentario of comentarios">{{comentario.comentario}} {{comentario.fechaComentario}}</p>
+    </div>
+</div>

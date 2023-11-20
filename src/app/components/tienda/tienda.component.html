@@ -1,0 +1,9 @@
+<form #compraform="ngForm">
+    <div class="mb-3" style="width: 400px;">
+        <label class="form-label">Cubo</label>
+        <select class="form-select" name="cajaidcubo" #cajaidcubo="ngModel" [(ngModel)]="idcubo" >
+            <option value="{{cubo.idCubo}}" *ngFor="let cubo of cubos">{{cubo.marca}} {{cubo.nombre}}</option>
+        </select>
+    </div>
+    <button class="btn btn-success" (click)="realizarPedido()">Realizar pedido</button>
+</form>

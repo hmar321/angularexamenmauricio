@@ -1,0 +1,17 @@
+<form #usuarioForm="ngForm" *ngIf="!loged">
+    <div class="mb-3" style="width: 400px;">
+        <label class="form-label">Email</label>
+        <input type="text" name="cajausuario" #cajausuario="ngModel" [(ngModel)]="usuario.email" class="form-control">
+    </div>
+    <div class="mb-3" style="width: 400px;">
+        <label class="form-label">Contraseña</label>
+        <input type="text" name="cajapassword" #cajapassword="ngModel" [(ngModel)]="usuario.password"
+            class="form-control">
+    </div>
+    <button class="btn btn-success" (click)="logearUsuario()">Login</button>
+</form>
+<div *ngIf="loged">
+    <a routerLink="/perfil" class="btn btn-success">Perfil</a>
+    <a routerLink="/compras" class="btn btn-info">Compras</a>
+    <a routerLink="/tienda" class="btn btn-primary">Comprar</a>
+</div>
